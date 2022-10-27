@@ -1,0 +1,61 @@
+POST http://localhost:3000/api/account/create/newNyan
+Content-Type: application/json 
+
+{
+    "username": "username",
+    "password": "password",
+    "email": "email@email.com",
+    "role": "Teacher",
+    "firstname": "Jorn",
+    "lastname": "Garbosa"
+}
+
+###
+
+POST http://localhost:3000/api/account/create/newNyanValidateEmail
+Content-Type: application/json
+
+{
+    "email": "email@email.com"
+}
+
+###
+
+POST http://localhost:3000/api/MOCK/login
+Content-Type: application/json
+
+{
+    "username": "email3@email.com",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:3000/api/teacher/classroom/addNewLesson
+Content-Type: application/json
+
+{
+    "title": "Lesson 1",
+    "notes": "None",
+    "classId": "635a0381d199d4f64d2e185f",
+    "attachements": "None"
+}
+
+###
+
+POST http://localhost:3000/api/student/classroom/joinClass
+Content-Type: application/json
+
+{
+    "studentId": "63514b2652d3e2339fd781c2",
+    "classCode": "xj22ub"
+}
+
+###
+
+POST http://localhost:3000/api/student/classroom/getClassTeacher
+Content-Type: application/json
+
+{
+    "teacher": "6359525ace7720afe8203b6f"
+}
